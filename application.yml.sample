@@ -1,0 +1,5 @@
+env:
+  db:
+    nameL: "your_sql_database_name"
+    user: "your_sql_username"
+    password: "your_sql_password"
