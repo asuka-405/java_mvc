@@ -7,7 +7,6 @@ yay -S mysql jdk17-openjdk gradle
 sudo systemctl start mysqld
 sudo systemctl enable mysqld
 sudo mysql_secure_installation
-sudo mysql -u root -p
 echo JAVA_HOME=/usr/lib/jvm/default >> .zshrc
 echo \
   export PATH="$JAVA_HOME/bin:$PATH" \
@@ -16,8 +15,11 @@ echo \
 
 DB Creation
 
-```sql
+```
+sudo mysql -u root -p
+```
 
+```sql
 create database java_mvn;
 create
   user 'username'@'localhost'

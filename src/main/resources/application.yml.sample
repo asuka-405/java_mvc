@@ -1,0 +1,26 @@
+# Spring Boot application configurations
+spring:
+  # DataSource configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/your_database_name
+    username: your_username
+    password: your_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # JPA/Hibernate configuration
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update # Change to 'create' for development, 'update' for production
+
+  # Logging configuration
+  # Adjust log levels as needed
+  logging:
+    level:
+      root: INFO
+      org.springframework: INFO
+      com.yourpackage: DEBUG # Set your package for debug logging
+
+# Server configuration (optional)
+server:
+  port: 8080 # Change to your desired port number
