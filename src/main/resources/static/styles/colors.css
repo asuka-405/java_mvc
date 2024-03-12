@@ -1,0 +1,9 @@
+:root {
+  --accent-deep: tomato;
+  --accent: coral;
+  --bg: #241f31;
+  --fg: white;
+  --fg-deep: #c5c5c5;
+  --body-bg: var(--bg);
+  --body-fg: var(--fg-deep);
+}

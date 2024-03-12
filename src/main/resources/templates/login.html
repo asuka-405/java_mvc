@@ -3,9 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/styles/colors.css}" />
+    <link rel="stylesheet" th:href="@{/styles/index.css}" />
+    <script th:src="@{/scripts/particles.min.js}"></script>
+    <script th:src="@{/scripts/script.js}" type="module"></script>
+    <title>Login</title>
+    <style>
+      .bg-text::after {
+        font-size: 17vw;
+      }
+      input::placeholder {
+        color: var(--fg);
+      }
+      input {
+        margin: 0.5em auto;
+      }
+    </style>
   </head>
   <body>
-    Login
+    <div id="particles-js"></div>
+    <main>
+      <section class="contact flex--left bg-text" data-bg="login">
+        <h2 class="title link">Login</h2>
+        <form th:action="@{/auth/login}" method="GET" class="fade-in">
+          <!-- Form Inputs. Each input must have a name="" attribute -->
+          <input placeholder="Username" type="text" name="username" required />
+          <input
+            placeholder="Password"
+            type="password"
+            name="password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+      </section>
+    </main>
+    <script th:if="${errorMessage}">
+      function showAlert() {
+        alert("${errorMessage}")
+      }
+      window.onload = showAlert
+    </script>
   </body>
 </html>

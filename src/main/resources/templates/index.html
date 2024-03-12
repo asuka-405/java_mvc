@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/styles/colors.css}" />
+    <link rel="stylesheet" th:href="@{/styles/index.css}" />
+    <script th:src="@{/scripts/particles.min.js}"></script>
+    <script th:src="@{/scripts/script.js}" type="module"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <main>
+      <section>
+        <h1
+          class="hack-text grab-attention"
+          text-after="ADMIN PANEL"
+          hack-speed="50"
+        >
+          Admin Panel
+        </h1>
+        <h2 class="title">
+          <a href="/login" class="link"> Click here </a>
+          to access dashboard or login
+        </h2>
+      </section>
+    </main>
+  </body>
+</html>
